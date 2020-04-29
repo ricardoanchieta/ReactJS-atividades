@@ -1,0 +1,39 @@
+<script>
+    const alunos = [
+        {
+            nome:"Jonas",
+            notas: [7,8,10]
+        },
+
+        {
+            nome:"Robson",
+            notas: [10,10,10]
+        },
+
+        {
+            nome:"Caetano",
+            notas: [4,2,2]
+        },
+
+    ]
+    
+
+    function ordenaAlunos(alunos){
+        const somaTotal = (a,b) =>a+b
+
+        alunos.sort((a,b) => {
+            if(a.notas.reduce(somaTotal)/3 >b.notas.reduce(somaTotal)/3 ){
+                return -1
+            } else
+                return 1
+
+
+        }) 
+
+
+    return alunos
+    }
+
+    console.log(ordenaAlunos(alunos))
+
+</script>
